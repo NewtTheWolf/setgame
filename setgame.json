@@ -1,0 +1,761 @@
+{
+  "name": "setgame",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "xGYtB",
+  "actions": [
+    {
+      "info": "19",
+      "storage": "1",
+      "varName2": "p",
+      "name": "Store Bot Client Info"
+    },
+    {
+      "title": "Successful",
+      "author": "",
+      "color": "GREEN",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "succesful.em",
+      "name": "Create Embed Message"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "option.1",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "option.2",
+      "name": "Store Command Params"
+    },
+    {
+      "info": "1",
+      "infoIndex": "3",
+      "storage": "1",
+      "varName": "game",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "option.1",
+      "comparison": "0",
+      "value": "stream",
+      "iftrue": "0",
+      "iftrueVal": "stream",
+      "iffalse": "4",
+      "iffalseVal": "error.para1",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "0",
+      "value": "stream",
+      "iftrue": "0",
+      "iftrueVal": "stream",
+      "iffalse": "4",
+      "iffalseVal": "error.para2",
+      "name": "Check Variable"
+    },
+    {
+      "condition": "0",
+      "comparison": "3",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "11",
+      "name": "Check Parameters"
+    },
+    {
+      "description": "Error",
+      "jump_to_anchor": "error.para3",
+      "color": "#ff0000",
+      "name": "Jump to Anchor"
+    },
+    {
+      "storage": "1",
+      "varName": "option.1",
+      "comparison": "1",
+      "value": "\"play\"",
+      "iftrue": "4",
+      "iftrueVal": "play",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.1",
+      "comparison": "1",
+      "value": "\"listening\"",
+      "iftrue": "4",
+      "iftrueVal": "listening",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.1",
+      "comparison": "1",
+      "value": "\"watching\"",
+      "iftrue": "4",
+      "iftrueVal": "watching",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "anchor_id": "error.para1",
+      "color": "#ff0000",
+      "description": "Error",
+      "name": "Create Anchor"
+    },
+    {
+      "title": "ERROR",
+      "author": "",
+      "color": "#ff0000",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "error.em.para1",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error.em.para1",
+      "message": "Bitte wähle eine Option, die möglichen Optionen lauten:\n\n`play`, `listening `, `watching`\n\nDer Command soll so aufgebaut sein:\n\n`${tempVars(\"p\")}setgame <opt1> <opt2> <gamename>`\n\n**Example:**\n\n`${tempVars(\"p\")}setgame play online Minecraft`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "error.em.para1",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "error.para2",
+      "color": "#ff0000",
+      "description": "Error",
+      "name": "Create Anchor"
+    },
+    {
+      "title": "ERROR",
+      "author": "",
+      "color": "#ff0000",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "error.em.para2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error.em.para2",
+      "message": "Bitte wähle eine Option, die möglichen Optionen lauten:\n\n`online`, `idle`, `invisible`, `dnd`\n\nDer Command soll so aufgebaut sein:\n\n`${tempVars(\"p\")}setgame <opt1> <opt2> <gamename>`\n\n**Example:**\n\n`${tempVars(\"p\")}setgame play online Minecraft`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "error.em.para2",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "error.para3",
+      "color": "#ff0000",
+      "description": "Error",
+      "name": "Create Anchor"
+    },
+    {
+      "title": "ERROR",
+      "author": "",
+      "color": "#ff0000",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "error.em.para3",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "error.em.para3",
+      "message": "Bitte wähle eine Option, die möglichen Optionen lauten:\n\nBitte wähle ein Spiel\n\nDer Command soll so aufgebaut sein:\n\n`${tempVars(\"p\")}setgame <opt1> <opt2> <gamename>`\n\n**Example:**\n\n`${tempVars(\"p\")}setgame play online Minecraft`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "error.em.para3",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "play",
+      "color": "#ff0000",
+      "description": "Play",
+      "name": "Create Anchor"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"online\"",
+      "iftrue": "4",
+      "iftrueVal": "online.play",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"idle\"",
+      "iftrue": "4",
+      "iftrueVal": "idle.play",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"invisible\"",
+      "iftrue": "4",
+      "iftrueVal": "invisible.play",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"dnd\"",
+      "iftrue": "4",
+      "iftrueVal": "dnd.play",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "online.play",
+      "color": "#ff8000",
+      "description": "Online",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "0",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "0",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Playing Online ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "idle.play",
+      "color": "#ff8000",
+      "description": "Idle",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "0",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "1",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Playing Idle ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "invisible.play",
+      "color": "#ff8000",
+      "description": "Invisible",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "0",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "2",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Playing Invisible ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "dnd.play",
+      "color": "#ff8000",
+      "description": "DnD",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "0",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "3",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Playing DnD ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "listening",
+      "color": "#ff0000",
+      "description": "Listening",
+      "name": "Create Anchor"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"online\"",
+      "iftrue": "4",
+      "iftrueVal": "online.li",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"idle\"",
+      "iftrue": "4",
+      "iftrueVal": "idle.li",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"invisible\"",
+      "iftrue": "4",
+      "iftrueVal": "invisible.li",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"dnd\"",
+      "iftrue": "4",
+      "iftrueVal": "dnd.li",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "online.li",
+      "color": "#ff8000",
+      "description": "Online",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "1",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "0",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Listening Online ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "idle.li",
+      "color": "#ff8000",
+      "description": "Idle",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "1",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "1",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Listening Idle ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "invisible.li",
+      "color": "#ff8000",
+      "description": "Invisible",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "1",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "2",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Listening Invisible ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "dnd.li",
+      "color": "#ff8000",
+      "description": "DnD",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "1",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "3",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Listening DnD ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "watching",
+      "color": "#ff0000",
+      "description": "Watching",
+      "name": "Create Anchor"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"online\"",
+      "iftrue": "4",
+      "iftrueVal": "online.wa",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"idle\"",
+      "iftrue": "4",
+      "iftrueVal": "idle.wa",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"invisible\"",
+      "iftrue": "4",
+      "iftrueVal": "invisible.wa",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "option.2",
+      "comparison": "1",
+      "value": "\"dnd\"",
+      "iftrue": "4",
+      "iftrueVal": "dnd.wa",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "online.wa",
+      "color": "#ff8000",
+      "description": "Online",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "2",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "0",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Watching Online ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "idle.wa",
+      "color": "#ff8000",
+      "description": "Idle",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "2",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "1",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Watching Idle ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "invisible.wa",
+      "color": "#ff8000",
+      "description": "Invisible",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "2",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "2",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Watching Invisible ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "anchor_id": "dnd.wa",
+      "color": "#ff8000",
+      "description": "DnD",
+      "name": "Create Anchor"
+    },
+    {
+      "activity": "2",
+      "nameText": "${tempVars(\"game\")}",
+      "url": "",
+      "stat": "3",
+      "name": "Set Bot Activity"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "message": "Botgame:\n\n**Watching DnD ${tempVars(\"game\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "description": "Successful",
+      "jump_to_anchor": "successful",
+      "color": "#00ff00",
+      "name": "Jump to Anchor"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "anchor_id": "successful",
+      "color": "#00ff00",
+      "description": "Successful",
+      "name": "Create Anchor"
+    },
+    {
+      "storage": "1",
+      "varName": "succesful.em",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
